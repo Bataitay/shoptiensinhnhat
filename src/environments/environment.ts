@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url:'https://api.khotiennamsinh.com/api/money'
+  url:'https://api.khotiennamsinh.com/api/money',
+  urlBackend:'http://127.0.0.1:8000/api/'
 };
 
 /*

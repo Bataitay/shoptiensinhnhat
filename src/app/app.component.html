@@ -89,7 +89,7 @@
   </div>
 </div>
 
-<div id="result" *ngIf="data.length > 0">
+<div id="result" *ngIf='data.length > 0'>
   <div class="row out-side" *ngFor="let item of data">
     <div class="list-money" *ngIf="item.displayValue == 1000">
       <div class="in-side">
@@ -111,7 +111,7 @@
               <path fill-rule="evenodd"
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
-          <button type="submit" class="click-order"><i class="fa-solid fa-cart-shopping"></i> Chọn</button>
+            <app-button-choose (AddToCartEvent)="addToCart(item)"></app-button-choose>
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@
               <path fill-rule="evenodd"
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
-          <button type="submit" class="click-order"><i class="fa-solid fa-cart-shopping"></i> Chọn</button>
+            <app-button-choose></app-button-choose>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@
               <path fill-rule="evenodd"
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
-          <button type="submit" class="click-order"><i class="fa-solid fa-cart-shopping"></i> Chọn</button>
+            <app-button-choose (AddToCartEvent)="addToCart(item)"></app-button-choose>
         </div>
       </div>
     </div>
@@ -183,7 +183,7 @@
               <path fill-rule="evenodd"
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
-          <button type="submit" class="click-order"><i class="fa-solid fa-cart-shopping"></i> Chọn</button>
+            <app-button-choose></app-button-choose>
         </div>
       </div>
     </div>
@@ -207,7 +207,7 @@
               <path fill-rule="evenodd"
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
-          <button type="submit" class="click-order"><i class="fa-solid fa-cart-shopping"></i> Chọn</button>
+            <app-button-choose></app-button-choose>
         </div>
       </div>
     </div>
@@ -217,7 +217,8 @@
 <div class="check-order">
   <div class="choose">
     <i class="fa-solid fa-cart-shopping"></i>&nbsp;
-    <span>Đã chọn: </span>&nbsp; &nbsp;
-    
+    <span>Đã chọn: <span>{{quantity || 0}}</span></span>&nbsp; &nbsp;
+    <a class="show-order" (click)="open()">Kiểm tra đơn hàng</a>
   </div>
 </div>
+<app-modal [getOrder]="getOrder" (quantity)="onQuantityChanged($event)"></app-modal>

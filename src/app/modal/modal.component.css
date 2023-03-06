@@ -1,0 +1,49 @@
+.table{
+  border-bottom-color: rgb(250, 112, 112);
+}
+.code, .tranfer{
+  font-weight: 400;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 2px solid rgb(255, 0, 0);
+  background-color: #fff;
+  padding: 2px;
+  text-align: center;
+  text-align: center;
+  color: transparent
+}
+.choose-method input::placeholder{
+  color: rgb(250, 112, 112);
+}
+.done{
+  width: 100%;
+  color: rgb(250, 112, 112);
+  text-align: center;
+  background-color:rgb(255, 0, 0);
+  overflow: hidden;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 15px;
+  color: #fff;
+}
+.modal-content{
+  overflow-y: scroll;
+  height: 525px;
+}
+.form-control{
+  border-radius: 15px;
+}
+.done-tranfer{
+  height: 38px;
+}
+.fa-regular{
+  float: right;
+  margin-right: 12px;
+  margin-top: -29px;
+  position: relative;
+  z-index: 2;
+  color: red;
+  font-size: 22px;
+  cursor: pointer;
+}
