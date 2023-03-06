@@ -270,7 +270,7 @@ input:focus-visible {
 }
 
 .out-side img {
-  width: 400px;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -379,19 +379,6 @@ input:focus-visible {
   margin-left: 84px;
 }
 
-.click-order {
-  overflow: hidden;
-  border-radius: 15px;
-  height: 30px;
-  width: 100px;
-  border-color: rgba(0, 0, 0, 0);
-  border-width: 2px;
-  background-color: rgb(255, 0, 0);
-  transition-duration: 0s;
-  color: rgb(255, 255, 255);
-
-}
-
 .check-order {
   height: 50px;
   bottom: 0px;
@@ -424,4 +411,8 @@ input:focus-visible {
   padding: 4px;
   text-decoration: none;
   cursor: pointer;
+}
+.close {
+    border: none;
+    background: no-repeat;
 }
