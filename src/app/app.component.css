@@ -416,3 +416,9 @@ input:focus-visible {
     border: none;
     background: no-repeat;
 }
+#message-empty {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

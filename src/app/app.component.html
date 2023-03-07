@@ -212,9 +212,11 @@
       </div>
     </div>
   </div>
-
 </div>
-<div class="check-order">
+<div id="message-empty" style="bottom: 60px; text-align: center;">
+  <h5 style="text-align: center;">{{message}}</h5>
+</div>
+<div class="check-order" *ngIf="quantity">
   <div class="choose">
     <i class="fa-solid fa-cart-shopping"></i>&nbsp;
     <span>Đã chọn: <span>{{quantity || 0}}</span></span>&nbsp; &nbsp;
