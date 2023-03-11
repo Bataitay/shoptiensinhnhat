@@ -103,7 +103,7 @@
       <div class="result-content">
         <div>
           <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
-          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+          <p class="price">vnd<span>{{price1k}}</span></p>
         </div>
         <div class="btn-order">
           <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -116,18 +116,21 @@
       </div>
     </div>
     <div class="list-money" *ngIf="item.displayValue == 10000">
-
       <div class="in-side">
         <span class="code-10k">{{item.code}}</span>
         <span class="siri-10k">
           {{item.seri}}
         </span>
         <img src="../assets/image/10K.jpg" alt="">
+        <span class="code-10k-bt">{{item.code}}</span>
+        <span class="siri-10k-bt">
+          {{item.seri}}
+        </span>
       </div>
       <div class="result-content">
         <div>
           <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
-          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+          <p class="price">vnd<span>{{price10k}}</span></p>
         </div>
         <div class="btn-order">
           <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -151,7 +154,7 @@
       <div class="result-content">
         <div>
           <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
-          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+          <p class="price">vnd<span>{{price2k}}</span></p>
         </div>
         <div class="btn-order">
           <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -175,7 +178,7 @@
       <div class="result-content">
         <div>
           <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
-          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+          <p class="price">vnd<span>{{price5k}}</span></p>
         </div>
         <div class="btn-order">
           <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -184,6 +187,89 @@
                 d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
             </svg></p>
             <app-button-choose></app-button-choose>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-money" *ngIf="item.displayValue == 20000">
+      <div class="in-side">
+        <span class="code-20k">{{item.code}}</span>
+        <span class="siri-20k">
+          {{item.seri}}
+        </span>
+        <img src="../assets/image/20k.jpg" alt="">
+        <span class="code-20k-bt">{{item.code}}</span>
+        <span class="siri-20k-bt">
+          {{item.seri}}
+        </span>
+      </div>
+      <div class="result-content">
+        <div>
+          <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
+          <p class="price">vnd<span>{{price20k}}</span></p>
+        </div>
+        <div class="btn-order">
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
+          </svg></p>
+          <app-button-choose></app-button-choose>
+        </div>
+      </div>
+    </div>
+    <div class="list-money" *ngIf="item.displayValue == 50000">
+      <div class="in-side">
+        <span class="code-50k">{{item.code}}</span>
+        <span class="siri-50k">
+          {{item.seri}}
+        </span>
+        <img src="../assets/image/50k.jpg" alt="">
+        <span class="code-50k-bt">{{price50k}}</span>
+        <span class="siri-50k-bt">
+          {{item.seri}}
+        </span>
+      </div>
+      <div class="result-content">
+        <div>
+          <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
+          <p class="price">vnd<span>{{price50k}}</span></p>
+        </div>
+        <div class="btn-order">
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
+          </svg></p>
+          <app-button-choose></app-button-choose>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-money" *ngIf="item.displayValue == 100000">
+      <div class="in-side">
+        <span class="code-100k">{{item.code}}</span>
+        <span class="siri-100k">
+          {{item.seri}}
+        </span>
+        <img src="../assets/image/100k.jpg" alt="">
+        <span class="code-100k-bt">{{item.code}}</span>
+        <span class="siri-100k-bt">
+          {{item.seri}}
+        </span>
+      </div>
+      <div class="result-content">
+        <div>
+          <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
+          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+        </div>
+        <div class="btn-order">
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z" />
+          </svg></p>
+          <app-button-choose></app-button-choose>
         </div>
       </div>
     </div>
@@ -199,7 +285,7 @@
       <div class="result-content">
         <div>
           <i class="fa-solid fa-money-bill"></i><span class="code-price">{{item.code}} {{item.seri}}</span>
-          <p class="price">vnd<span>{{item.displayValue}}</span></p>
+          <p class="price">vnd<span>{{price200k}}</span></p>
         </div>
         <div class="btn-order">
           <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -213,8 +299,8 @@
     </div>
   </div>
 </div>
-<div id="message-empty" style="bottom: 60px; text-align: center;">
-  <h5 style="text-align: center;">{{message}}</h5>
+<div id="message-empty" style="bottom: 60px; text-align: center; {{message =='' ? 'display: none' : 'display: block'}}" >
+  <h5 style="text-align: center;" >{{message}}</h5>
 </div>
 <div class="check-order" *ngIf="quantity">
   <div class="choose">

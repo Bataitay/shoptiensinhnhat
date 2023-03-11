@@ -22,6 +22,15 @@ export class ModalComponent implements OnInit, AfterViewInit {
   number_account: string = '8162186418426';
   message: string = '';
   inforForm !: FormGroup;
+  price1k: number = 100000;
+  price2k: number = 120000;
+  price5k: number = 160000;
+  price10k: number = 200000;
+  price20k: number = 220000;
+  price50k: number = 250000;
+  price100k: number = 300000;
+  price200k: number = 400000;
+  ship: number = 30000;
 
   constructor(private fb: FormBuilder,
     private modalService: ModalServiceService) { }
@@ -47,7 +56,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
     this.method = 2;
   }
   toOrder() {
-    let $data = {
+    let data = {
       codeAndSeri: this.codeAndSeri?.nativeElement?.textContent,
       faceValueOfMoney: this.faceValueOfMoney?.nativeElement?.textContent,
       total: this.total?.nativeElement?.textContent,
@@ -58,7 +67,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
       note: this.inforForm?.value.note,
       pay_method: this.method,
     }
-    this.modalService.sendMail($data).then((res: any) => {
+    this.modalService.sendMail(data).then((res: any) => {
       console.log(res);
 
     })

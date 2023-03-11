@@ -22,13 +22,36 @@
             <tr *ngFor="let value of getOrder; let index = index">
               <td scope="col" #codeAndSeri>{{value.code}} {{value.seri}}</td>
               <td scope="col" #faceValueOfMoney>{{value.displayValue}}</td>
-              <td scope="col" #price>Otto</td>
+              <td scope="col" #price *ngIf="value.displayValue == 1000">
+                {{ price1k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 2000">
+                {{ price2k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 5000">
+                {{ price5k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 10000">
+                {{ price10k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 20000">
+                {{ price20k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 50000">
+                {{ price50k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 100000">
+                {{ price100k }}
+              </td>
+              <td scope="col" #price *ngIf="value.displayValue == 200000">
+                {{ price200k }}
+              </td>
               <td><i class="fa-solid fa-trash-can" (click)="delete(index)"></i></td>
             </tr>
           </ng-container>
             <tr>
               <th scope="row">Phí ship</th>
-              <td>30.000</td>
+              <td>{{ship}}</td>
               <td  #total>Tổng</td>
               <td></td>
             </tr>

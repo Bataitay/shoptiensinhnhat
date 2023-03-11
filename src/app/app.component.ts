@@ -16,15 +16,23 @@ export class AppComponent {
   data: any = [];
   listOrder: any = [];
   getOrder: any = [];
-  faceBook = '';
-  phone = '';
+  faceBook = 'https://www.facebook.com/tienseringaysinhnhat';
+  phone = '0786277999';
   zalo = '';
+  address = 'Số 6A Ngõ 1 Lĩnh Nam, Mai Động, Hoàng Mai, Hà Nội';
   quantity: any;
   formModal: any;
   serachBase !: FormGroup;
   serachCouple !: FormGroup;
   message: string = '';
-
+  price1k: number = 100000;
+  price2k: number = 120000;
+  price5k: number = 160000;
+  price10k: number = 200000;
+  price20k: number = 220000;
+  price50k: number = 250000;
+  price100k: number = 300000;
+  price200k: number = 400000;
   constructor(
     private fb: FormBuilder,
     private appService: AppService,
@@ -56,6 +64,7 @@ export class AppComponent {
     if (day && month && year) {
       this.appService.searchBase(search).then((res: any) => {
         this.data = res.data.list;
+        this.message = '';
         if (res.data.list.length == 0) {
           this.message = 'Số này hiện không có, bạn liên hệ Fanpage hoặc Zalo để được tư vấn thêm';
         }
